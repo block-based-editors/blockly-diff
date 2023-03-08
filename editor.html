@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Differences for Code Editor</title>
+  <body onload="start();">
+    <style>
+
+      .row {
+        display: flex;
+      }
+      
+      /* Create two equal columns that sits next to each other */
+      .column {
+        flex: 50%;
+        padding: 2px;
+      }
+      </style>
+    
+
+<div class="row">
+  <div class="column">
+    <input type="button" value="Load JSON" onclick="document.getElementById('input_previous').click();" />
+    <input type="file" style="display:none;" id="input_previous" name="file"/>
+    <div id="error_previous" value="error"></div>
+    
+    <div id="blocklyPreviousDiv" style="height: 780px"></div>
+  </div>
+  <div class="column">
+    <input type="button" value="Load JSON" onclick="document.getElementById('input_mine').click();" />
+    <input type="file" style="display:none;" id="input_mine" name="file"/>
+    <div id="error_mine" value="error"></div>
+
+    <div id="blocklyMineDiv" style="height: 780px"></div>
+  </div>
+</div>
+
+
+
+<script src="https://unpkg.com/blockly/blockly.min.js"></script>
+<script src="https://unpkg.com/@blockly/plugin-workspace-search@5.0.3/dist/index.js"></script>
+<script src='./editor.js'></script>
+
+</body>
+</html>
+ 

@@ -1,0 +1,8 @@
+
+Scrolling with one large stack will probably fail.
+
+Possible extentions:
+- collapse all equal blocks
+- make it possible to specify files on the url
+- make it possible to drag drop files on the workspaces
+-  
