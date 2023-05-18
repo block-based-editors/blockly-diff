@@ -949,7 +949,7 @@ function load_json_text_to_workspace(workspace, text)
   }
   else
   {
-    if(json?.editor.name)
+    if(json?.editor?.name)
     {
       
       fetch('editors/'+json.editor.name+'/blocks.js')
