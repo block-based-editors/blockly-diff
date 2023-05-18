@@ -1,0 +1,55 @@
+{
+    "blocks": {
+      "languageVersion": 0,
+      "blocks": [
+        {
+          "type": "variables_set",
+          "id": "ZnM|[XoIZZ2D3Q4q3DOw",
+          "x": 162,
+          "y": 187,
+          "fields": {
+            "VAR": {
+              "id": "j?/V?gBU1u+~JeDB.|$J"
+            }
+          },
+          "inputs": {
+            "VALUE": {
+              "block": {
+                "type": "math_arithmetic",
+                "id": "qmffemp1b-S$PW;}L|Lm",
+                "fields": {
+                  "OP": "ADD"
+                },
+                "inputs": {
+                  "A": {
+                    "shadow": {
+                      "type": "math_number",
+                      "id": "3CoJM4f@r:8sNCajzW#w",
+                      "fields": {
+                        "NUM": 4
+                      }
+                    }
+                  },
+                  "B": {
+                    "shadow": {
+                      "type": "math_number",
+                      "id": "]Lt/VNnq,J6xAd8,Tga}",
+                      "fields": {
+                        "NUM": 2
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "variables": [
+      {
+        "name": "b",
+        "id": "j?/V?gBU1u+~JeDB.|$J"
+      }
+    ]
+  }

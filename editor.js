@@ -949,22 +949,28 @@ function load_json_text_to_workspace(workspace, text)
   }
   else
   {
-	if(json.editor.name)
-	{
-    
-		 fetch('editors/'+json.editor.name+'/blocks.js')
-	    .then(req => req.text())
-	    .then((res) => {
-        // load the blocks
-	      // Blockly is already loaded so remove from blocks.js
-        res = res.replace("import * as Blockly from 'blockly';","")
-        eval(res);
+    if(json?.editor.name)
+    {
+      
+      fetch('editors/'+json.editor.name+'/blocks.js')
+        .then(req => req.text())
+        .then((res) => {
+          // load the blocks
+          // Blockly is already loaded so remove from blocks.js
+          res = res.replace("import * as Blockly from 'blockly';","")
+          eval(res);
 
-        Blockly.serialization.workspaces.load(json, workspace)
- 
-	
-	    })
-	}
+          // load the json once the eval and thus the custom blocks are there
+          Blockly.serialization.workspaces.load(json, workspace)
+  
+    
+        })
+    }
+    else {
+      // just load the json and works for standard Blockly blocks
+      Blockly.serialization.workspaces.load(json, workspace)
+  
+    }
   }
 }
 
